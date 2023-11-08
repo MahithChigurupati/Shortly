@@ -3,6 +3,7 @@ const express = require("express")
 
 //importing routes
 const userRouter = require("./routes/users-router.js")
+const urlRouter = require("./routes/url-router.js")
 
 const app = express()
 
@@ -11,6 +12,7 @@ app.use(express.urlencoded({ extended: true }))
 
 //initializing app to use routes
 app.use("/", userRouter)
+app.use("/shortly", urlRouter)
 
 //for all other invalid routes
 app.use("*", (req, res) => {
