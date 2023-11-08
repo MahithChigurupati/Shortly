@@ -5,15 +5,12 @@ const userController = require("../controllers/users-controller.js")
 const router = require("express").Router()
 
 //Route for POST method
-router.post("/v1/user", userController.add)
+router.post("/v1/user", userController.createUser)
 
 //Route for GET method
-router.get("/v2/user/:id", userController.retrieve)
-
-//Route for PUT method
-router.put("/v1/user/:id", userController.update)
+router.get("/v1/user/:id", userController.retrieveUser)
 
 //Route for GET method -- a health check method
-router.get("/health", userController.check)
+router.get("/health", userController.healthCheck)
 
 module.exports = router

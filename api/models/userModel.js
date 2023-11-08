@@ -24,6 +24,14 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING,
                 allowNull: false,
             },
+            user_tier: {
+                type: DataTypes.INTEGER,
+                allowNull: false,
+            },
+            requests_available: {
+                type: DataTypes.INTEGER,
+                allowNull: false,
+            },
             account_created: {
                 type: DataTypes.STRING,
                 allowNull: false,
