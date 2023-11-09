@@ -74,7 +74,11 @@ npm start
 - chai : testing framework
 - bcrypt : a library to securely hash passwords
 
-you can also run following command to install all the dependancies - `npm i bcrypt dotenv express moment winston chai supertest pg sequelize`
+you can also run following command to install all the dependancies
+
+```
+npm i bcrypt dotenv express moment winston chai supertest pg sequelize
+```
 
 ## Endpoint URLs for User Schema
 
@@ -129,6 +133,9 @@ GET /shortly/{url}
 //GET Method to get all the shortly URLs created by a user
 GET /shortly/user/getAllMyUrl
 
+```
+
+
 ## Sample JSON Request for POST Method to customize URL
 
 ``` JSON
@@ -137,6 +144,7 @@ GET /shortly/user/getAllMyUrl
     "shortly_url": "tramly"
 }
 ```
+
 
 ``` JSON
 {
