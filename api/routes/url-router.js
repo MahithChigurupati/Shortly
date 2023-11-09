@@ -5,12 +5,12 @@ const urlController = require("../controllers/url-controller.js")
 const router = require("express").Router()
 
 //Route for POST method
-router.post("/cutomizeUrl", urlController.customizeUrl)
+router.post("/customizeUrl", urlController.customizeUrl)
 
 //Route for GET method
-router.get("/:url", urlController.getUrl)
+router.get("/:url", urlController.getOriginalUrl)
 
 // Route for Get method
-router.get("/:user_id", urlController.getAllMyUrl)
+router.get("/user/getAllMyUrl", urlController.getAllMyUrl)
 
 module.exports = router

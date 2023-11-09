@@ -1,4 +1,4 @@
-// initializing server port
+// initializing server with a port
 
 const app = require("./api/app.js")
 

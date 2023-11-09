@@ -1,10 +1,15 @@
+// importing external libraries
+// bcrypt for hashing the password
+// moment for creating timestamps
+// logger for logging
 const bcrypt = require("bcrypt")
 const moment = require("moment")
 const logger = require("../../logger")
 
-const db = require("../models")
 const sequelize = require("../models/index")
 
+// importing db models
+const db = require("../models")
 const User = db.users
 
 // A health check method to check db connection status
@@ -33,7 +38,8 @@ const createUser = async (req, res) => {
         !req.body.last_name ||
         !req.body.username ||
         !req.body.password ||
-        !req.body.user_tier
+        !req.body.user_tier ||
+        Object.keys(req.body).length > 5
     ) {
         logger.error("POST: Failed due to bad request body: Fields mismatch")
 
