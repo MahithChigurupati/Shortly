@@ -32,7 +32,7 @@ In this project, I have implemented the following features:
 - if you need your shortly url to be something like http://{baseUrl}/:shortly_url , only pass shortly_url parameter key in customizeUrl   POST body optionally
 - log messages will be in logs directory
 - use env.example to setup environment variables
-- make sure you have postgres installed in your machine
+- make sure you have postgres installed in your machine with a db with name `shortly_db` created
 
 User Tier Structure:
 - Tier 1: 1000 requests
